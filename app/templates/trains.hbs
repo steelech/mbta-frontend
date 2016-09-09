@@ -1,0 +1,7 @@
+<ul class="list-group trains">
+	{{#each model as |train|}}
+		<li class="list-group-item">
+			Departs at {{train.departs}} and arrives at {{train.arrives}}
+		</li>
+	{{/each}}
+</ul>

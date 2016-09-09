@@ -1,0 +1,15 @@
+ <div class="list-group-item" onmouseover={{action "over"}} onmouseout={{action "off"}}>
+ 	<div class="subscription-select-container">
+ 		<div class="subscription-trip-name">
+ 			{{trip_name}}
+ 		</div>
+ 		<div class="subscription-buttons">
+ 			<div class={{viewButtonClass}} onclick={{action "showViewDialog" trip_id trip_name}}>
+ 				{{fa-icon "train"}}
+ 			</div>
+ 			<div class={{deleteButtonClass}} onclick={{action "showDeleteDialog" trip_id trip_name subscription_id}}>
+ 				{{fa-icon "trash"}}
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>

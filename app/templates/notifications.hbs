@@ -1,0 +1,51 @@
+<h1 class="about-header">Notifications</h1>
+<div class="col-md-18">
+	<div class="phone-number-submit">
+		<div class="phone-number-search">
+			{{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}}
+		</div>
+		<div class="phone-number-button">
+			<a class="btn btn-default" {{action "getSubscriptionsList"}}>Go</a>
+		</div>
+	</div>
+</div>
+{{#if showSubscriptionsList}}
+	{{#subscriptions-list subscriptions=subscriptions phone_number=subscriptionPhoneNumber showViewDialog="showViewDialog" showDeleteDialog="showDeleteDialog"}}
+	{{/subscriptions-list}}
+{{else}}
+	<div class="subscription-prompt">
+		<i>Enter the phone number used for the notification subscription</i>
+	</div>
+{{/if}}
+
+{{#if viewDialog}}
+	{{#modal-dialog translucentOverlay=true close="closeViewDialog"}}
+		<h1 class="subscription-modal-trip-name">{{trip_name}}</h1>
+		{{#subscription-schedule stops=stops getStops="getStops"}}
+		{{/subscription-schedule}}
+	{{/modal-dialog}}
+{{/if}}
+
+{{#if deleteDialog}}
+	{{#modal-dialog translucentOverlay=true classes="deleteModalDialog" close="closeDeleteDialog"}}
+		<div class="subscription-delete">
+			<div class="subscription-delete-header">
+				<h2>Delete subscription for:</h2>
+			</div>
+			<div class="subscription-delete-trip-name">
+				<b>{{trip_name}}</b>
+			</div>
+			<div class="subscription-delete-confirmation-text">
+				<i>Are you sure you would like to unsubscribe from notifications for this trip?</i>
+			</div>
+			<div class="subscription-delete-buttons">
+				<div class="subscription-delete-cancel-button">
+					<div class="btn btn-default" {{action "closeDeleteDialog"}}>Cancel {{fa-icon "hand-stop-o"}}</div>
+				</div>
+				<div class="subscription-delete-confirmation-button">
+					<div class="btn btn-default" {{action "deleteSubscription"}}>Delete {{fa-icon "trash"}} </div>
+				</div>
+			</div>
+		</div>
+	{{/modal-dialog}}
+{{/if}}

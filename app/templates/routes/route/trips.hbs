@@ -1,0 +1,38 @@
+{{#if showModalDialog}}
+	{{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
+		<div class="modal-dialog-container">
+			<div class="subscribe-text">Subscribe to notifications for this trip</div>
+			{{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}}
+			<div class="subscribe-modal-buttons">
+				<div class="subscribe-cancel-button">
+					<div class="btn btn-default" {{action "closeModalDialog"}}>
+						Cancel {{fa-icon "hand-stop-o"}}
+					</div>
+				</div>
+				<div class="subscribe-confirm-button">
+					<div class="btn btn-default" {{action "subscribe"}}>
+						Subscribe {{fa-icon "mobile"}}
+					</div>
+				</div>
+			</div>
+		</div>
+	{{/modal-dialog}}
+{{/if}}
+<div class="row trip">
+	<div class="col-md-6 trips-container">
+	<h1 class="trips-header">Trips</h1>
+		{{#trips-filter
+		        filter=(action 'filterByTrip')
+		        as |trips|}}
+		        <div class="col-md-17">
+		                <ul class="list-group">
+		                    {{#each trips as |trip|}}
+		                        {{#trip-select setTrip="pickTrip" trip_name=trip.trip_name id=trip.id}}
+		                        {{/trip-select}}
+		                    {{/each}}
+		                </ul>
+		        </div>
+		{{/trips-filter}}
+	</div>
+	{{trip-schedule stops=stops trip_name=trip_name showSchedule=showSchedule openModalDialog="openModalDialog"}}
+</div>

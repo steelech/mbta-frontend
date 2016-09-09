@@ -1,0 +1,10 @@
+<div class="col-md-12 subscription-schedule-stuff">
+	{{#each stops as |stop|}}
+		<div class="list-group-item">
+			<div class="subscription-stop">
+				{{stop.stop_name}}
+				{{stop.stop_time}}
+			</div>
+		</div>
+	{{/each}}
+</div>

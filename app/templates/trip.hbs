@@ -1,0 +1,9 @@
+{{#routes-filter
+	filter=(action 'filterByRoute')
+	as |stops|}}
+        <ul class="list-group">
+	        {{#each stops as |trip|}}
+	                <li class="list-group-item">{{trip.trip_name}}</li>
+	        {{/each}}
+        </ul>
+{{/routes-filter}}

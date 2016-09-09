@@ -1,0 +1,6 @@
+<div class="routes-filter-class">
+	{{input value=value  key-up=(action 'handleFilterEntry') class="form-control routes-input" type="text" placeholder="Search"}}
+	{{#direction-selector disabled=disabled setDirection="setDirection" as |direction|}}
+	{{/direction-selector}}
+</div>
+{{yield results}}

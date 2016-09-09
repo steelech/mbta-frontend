@@ -1,0 +1,499 @@
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
+.page-header a h1 {
+	color: #555;
+}
+
+.navbar-default .navbar-nav > li > a.active,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: #555555;
+	background-color: #e7e7e7;
+}
+
+li:hover {
+	background-color: #D3D3D3;
+}
+
+
+.hidden {
+	visibility: hidden;
+}
+
+.get-route-button  {
+	float: right;
+
+}
+
+.direction-selector {
+	float:right;
+       	padding-right: 10px;
+        width: 120px;
+        display: inline-block;
+}
+
+li {
+        font-size: 15px;
+}
+
+.route-selector:hover {
+	background-color: #D3D3D3;
+}
+
+.route-selector {
+	padding-right: 5%;
+	display: inline-flex;
+	width: 100%;
+}
+
+.route-info {
+	width: 100%;
+}
+
+.route-selector:hover .directions {
+	font-size: 10px;
+}
+
+.routes-filter {
+}
+
+.trips {
+	float: right;
+    display: inline-block;
+}
+
+.trip-select {
+	
+}
+
+.trip-select:hover {
+		background-color: #D3D3D3;
+}
+
+.trip-select-button {
+	.fa-clock-o {
+		color: #ad68ad;
+		&:hover {
+			color: #7b3e7b;
+		}
+	}
+}
+
+.trip-schedule {
+	display:inline-flex;
+	width: 100%;
+}
+
+.stop-name {
+	width: 100%;
+
+}
+
+.stop-time {
+	width: 100%;
+	text-align: right;
+}
+
+.ember-modal-dialog {
+	width: 400px;
+	height: 300px;
+	overflow: scroll;
+}
+
+.subscribe-button {
+	display: inline-flex;
+}
+
+
+.modal-dialog-container {
+	display: inline-block;
+	width: 275px;
+	height: 195px;
+	margin-left: 15%;
+}
+
+.subscribe-text {
+	text-align: center;
+	padding-bottom: 80px;
+}
+
+.subscribe-modal-button {
+	height: 75px;
+	padding-right: 60px;
+	padding-left: 90px;
+	padding-top: 22.5px;
+}
+
+
+.routes-container {
+	padding-left: 25%;
+	padding-right: 25%
+}
+
+
+.routes-input {
+	width: 50%;
+	margin-left: 15%;
+}
+
+.routes-header {
+	text-align: center;
+	margin-bottom: 5%;
+	font-size: 30px;
+
+	h1 {
+		font-size: 30px;
+	}
+}
+
+.trips-input {
+	width: 170px;
+}
+
+.trip-location {
+	padding-top: 5px;
+	margin-right: 10px;
+}
+
+.trips-header {
+	text-align: center;
+}
+
+.stop {
+	width: 100%;
+
+}
+
+.trip-name {
+	width: 100%;
+}
+
+.other-container {
+	display: inline-flex;
+	width: 100%;
+}
+
+.btn-primary {
+	margin-bottom: 0px;
+}
+
+.trip-name-header {
+	width: 100%;
+	text-align: -webkit-center;
+	h1 {
+		font-size: 30px;
+	}
+}
+
+.btn {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.subscribe-container {
+	margin-left: 30%;
+	width: 200px;
+}
+
+.subscribe {
+	margin-right: 5px;
+	.fa-mobile-phone {
+		color: #b193c3;
+	}
+}
+
+.btn-default.subscribe-container {
+
+}
+
+.no-trip-selected {
+	padding-top: 200px;
+	
+}
+
+.stops-header {
+	width: 100%;
+	text-align: -webkit-center;
+	padding-top: 15px;
+	
+}
+.stop-name-header {
+	text-align: center;
+	padding-top: 50px;
+}
+
+.about-header {
+	text-align: center;
+}
+
+.header {
+	padding-bottom: 10px;
+	margin-top: 30px;
+}
+
+.page-nav {
+	width: 100%;
+	display: inline-flex;
+	padding-top: 2%;
+}
+
+.navbar {
+	min-height: 40px;
+}
+
+.trips-container {
+	padding-left: 80px;
+}
+
+.left-nav {
+	padding-left: 20px;
+	width: 320%;
+	display: inline-flex;
+
+	a {
+	padding-right: 20px;
+	}
+}
+
+.right-nav {
+	margin-left: 25%;
+	width: 100%;
+	display: inline-flex;
+	a {
+		padding-right: 15px;
+	}
+}
+
+.phone-number-search {
+	width: 210px;
+}
+
+.subscription-prompt {
+	text-align: center;
+	margin-top: 3%;
+}
+
+.phone-number-submit {
+	display: inline-flex;
+	margin-left: 39%;
+	margin-right: 39%;
+	margin-top: 3%;
+}
+
+.subscriptions-list-header {
+	text-align: center;
+}
+
+.subscriptions-list-content {
+	margin-left: 27%;
+}
+
+.subscriptions-list {
+	margin-top: 40px;
+}
+
+.subscription-select-container {
+	display: inline-flex;
+	width: 100%;
+	
+}
+
+.subscription-modal-trip-name {
+	width: 100%;
+	font-size: 25px;
+	text-align: center;
+}
+
+.subscription-buttons {
+	display: inline-flex;
+	hidden: true;
+}
+
+.subscription-delete-button {
+	padding-left: 10px;
+	
+}
+
+.subscription-view-button {
+	
+}
+
+.fa-train {
+	color: lightgrey;
+	&:hover {
+		color: lightgrey;
+	}
+}
+
+.fa-trash {
+	color: #b193c3;
+	&:hover {
+		color: #6e3590;
+	}
+}
+
+.deleteModalDialog {
+	
+}
+
+.subscription-trip-name {
+	width: 100%;
+}
+
+.subscription-delete {
+	text-align: center;
+	display: inline-block;
+}
+
+.subscription-delete-confirmation-text {
+	margin-top: 15%;
+}
+
+.subscription-delete-buttons {
+	display: inline-flex;
+	margin-top: 15%;
+	.fa-hand-stop-o {
+		color: #b193c3;
+
+	}
+}
+
+.subscription-delete-confirmation-button {
+	.fa-trash {
+		color: #b193c3;
+	}
+}
+
+.subscription-buttons {
+	.fa-train {
+		color: #b193c3;
+		&:hover {
+			color: #6e3590;
+		}
+	}
+}
+
+.no-subscriptions {
+	text-align: center;
+	margin-top: 5%;
+}
+
+.home-container {
+	text-align: center;
+	margin-left: 120px;
+	margin-right: 120px;
+	padding-top: 20px;
+}
+
+.myclass {
+	display: inline-flex;
+	.btn {
+		height: 36px;
+	}
+}
+
+.selectize-control {
+}
+
+.selectize-input {
+	width: 90px;
+	font-size: 12px;
+}
+
+.route-schedule {
+	margin-bottom: 100px;
+}
+
+.routes-filter-class {
+	display: inline-flex;
+	width: 100%;
+}
+
+.trip-schedule-container {
+	padding-left: 130px;
+}
+
+.trips-filter-container {
+	display: inline-flex;
+}
+
+.fa-hand-stop-o {
+	color: lightgrey;
+}
+
+.route-selector {
+	.fa-train {
+		color: #b193c3;
+		&:hover {
+			color: #6e3590;
+		}
+	}
+}
+
+.container {
+	padding-top: 30px;
+}
+
+.navbar-inverse .navbar-nav > li > a { 
+	color: purple;
+}
+
+.nav-link {
+	&:hover {
+	}
+}
+
+
+.header-icon {
+	font-size: 36px;
+	.fa-train {
+		color: #b193c3;
+	}
+	margin-right: 30px;
+}
+
+.navbar-left {
+	
+}
+
+.navbar-header {
+	margin-right: 30px;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+}
+
+.subscribe-button-container {
+	padding-left: 40%;
+}
+
+.subscribe-modal-buttons {
+	display: inline-flex;
+	margin-top: 90px;
+	margin-left: 40px;
+
+	.fa-hand-stop-o {
+		color: #b193c3;
+	}
+
+	.fa-mobile {
+		color: #b193c3;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+{{#if subscriptions.length}}
+	<div class="subscriptions-list">
+		<div class="subscriptions-list-header">
+			<i>Notification subscriptions for <b>{{phone_number}}</b>:</i>
+		</div>
+		<div class="subscriptions-list-content list-group col-md-6">
+			{{#each subscriptions as |subscription|}}			
+				{{#subscription-select trip_name=subscription.trip_name trip_id=subscription.trip_id subscription_id=subscription.id showViewDialog="showViewDialog" showDeleteDialog="showDeleteDialog" }}
+				{{/subscription-select}}
+			{{/each}}
+		</div>
+	</div>
+{{else}}
+	<div class="no-subscriptions">
+		<i>There are no notification subscriptions associated with the phone number: <b>{{phone_number}}</b></i>
+	</div>
+{{/if}}

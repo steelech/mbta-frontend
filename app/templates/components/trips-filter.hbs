@@ -1,0 +1,7 @@
+<div class="trips-filter-container">
+	<div class="trip-location">
+		<b>Leaves at:</b>
+	</div>
+	{{input value=value key-up=(action 'handleFilterEntry') class="form-control trips-input" type="text" placeholder="Search"}}
+</div>
+{{yield results}}

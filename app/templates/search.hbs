@@ -1,0 +1,14 @@
+<ul class="list-group">
+	{{#each model as |route|}}
+		<ul class="list-group-item">
+			<li class="list-group-item">Route Id: {{route.Id}}</li>
+			<li class="list-group-item">Route Name: {{route.Name}}</li>
+			<ul class="list-group-item">
+				{{#each route.trips as |trip|}}
+					<li>hi</li>
+				{{/each}}
+			</ul>
+		</ul>
+	{{/each}}
+	{{!-- <li>hi</li> --}}
+</ul>
