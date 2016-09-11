@@ -20,6 +20,8 @@ export default Ember.Controller.extend({
 		    this.set('phoneNumber', value);
 		},
 		getSubscriptionsList() {
+	
+			console.log(this.get("phoneNumber"));
 			this.set('subscriptions', this.get('store').query('subscription', { phone_number: this.get('phoneNumber') }));
 			this.set("subscriptionPhoneNumber", this.get("phoneNumber"));
 			this.set("showSubscriptionsList", true);

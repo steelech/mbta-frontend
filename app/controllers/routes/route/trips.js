@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from '../config/environment';
 
 export default Ember.Controller.extend({
         queryParams: ['direction'],
@@ -37,7 +38,7 @@ export default Ember.Controller.extend({
                     this.set("showModalDialog", true);
                 },
                 subscribe() {
-                    this.get('ajax').request('http://localhost:3000/subscriptions', {
+                    this.get('ajax').request(ENV.APP.host, {
                         method: 'POST',
                         data: {
                             direction: this.get('direction'),
