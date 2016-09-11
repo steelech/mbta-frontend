@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
                     this.set("showModalDialog", true);
                 },
                 subscribe() {
-                    this.get('ajax').request(ENV.APP.host, {
+                    this.get('ajax').request(ENV.APP.host + '/subscriptions', {
                         method: 'POST',
                         data: {
                             direction: this.get('direction'),
