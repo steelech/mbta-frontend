@@ -31,6 +31,7 @@ export default Ember.Controller.extend({
 			this.set("trip_name", trip_name);
 			console.log("trip_id: ", trip_id);
 			this.set("stops", this.get("store").query("stop", { trip_id: trip_id }));
+			this.sortStops(this.get("store").query("stop", { trip_id: trip_id }));
 		},
 		showDeleteDialog(trip_id, trip_name, subscription_id) {
 			this.set("deleteDialog", true);
@@ -64,4 +65,9 @@ export default Ember.Controller.extend({
 			self.set("subscriptions", newSubscriptionsArray);
 		});
 	},
+	sortStops: function(stops) {	
+		for(var i = 0;i < stops.toArray().length;i++) {
+			console.log(stops.toArray()[i]);
+		}
+	}
 });
