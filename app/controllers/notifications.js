@@ -29,7 +29,8 @@ export default Ember.Controller.extend({
 		showViewDialog(trip_id, trip_name) {
 			this.set("viewDialog", true);
 			this.set("trip_name", trip_name);
-			this.set("stops", this.get("store").query("stop", { trip_id: this.get(trip_id) }));
+			console.log("trip_id: ", trip_id);
+			this.set("stops", this.get("store").query("stop", { trip_id: trip_id }));
 		},
 		showDeleteDialog(trip_id, trip_name, subscription_id) {
 			this.set("deleteDialog", true);
