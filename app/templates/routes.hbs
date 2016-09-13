@@ -1,4 +1,34 @@
-<div class="jumbotron">
+<div class="routes-jumbotron-container">
+    <div class="jumbotron">
+        <div class="row routes-container">
+            <div class="routes-header">
+                <h1> Pick a route </h1>
+            </div>
+            {{#routes-filter setDirection="setDirection"
+                    filter=(action 'filterByRoute')
+                    as |routes|}}
+
+                    {{#each flashMessages.queue as |flash|}}
+                        {{flash-message flash=flash}}
+                    {{/each}}
+                    <div class="col-md-12 route-schedule">
+                            <ul class="list-group">
+                                            {{#if routes}}
+                                            {{#each routes as |route|}}
+                                                    {{#route-select selectRoute="displayRoute" value1=route.route_name value2=route.trips.length id=route.id}}
+                                                    {{/route-select}}
+                                            {{/each}}
+                                        {{else}}
+                                            <li class="list-group-item">Your search returned no results.</li>
+                                    {{/if}}
+                            </ul>
+                    </div>
+            {{/routes-filter}}
+        </div>
+    </div>
+</div>
+
+{{!-- <div class="jumbotron">
     <div class="row routes-container">
         <div class="routes-header">
             <h1> Pick a route </h1>
@@ -24,4 +54,4 @@
                 </div>
         {{/routes-filter}}
     </div>
-</div>
+</div> --}}

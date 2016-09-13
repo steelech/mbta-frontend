@@ -2,8 +2,12 @@
 	{{#each stops as |stop|}}
 		<div class="list-group-item">
 			<div class="subscription-stop">
-				{{stop.stop_name}}
-				{{stop.stop_time}}
+				<div class="subscription-stopname">
+					{{stop.stop_name}}
+				</div>
+				<div class="subscription-stoptime">
+					{{stop.stop_time}}
+				</div>
 			</div>
 		</div>
 	{{/each}}

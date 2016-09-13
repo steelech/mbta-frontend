@@ -461,6 +461,15 @@ li {
 	margin-right: 30px;
 }
 
+.routes-jumbotron-container {
+	.jumbotron {
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	
+}
+
 .jumbotron {
 	margin-bottom: 0px;
 }
@@ -483,6 +492,19 @@ li {
 	}
 }
 
+.subscription-stop {
+	display: inline-flex;
+	width: 100%;
+}
+
+.subscription-stopname {
+	width: 240px;
+	
+}
+
+.subscription-stoptime {
+	
+}
 
 
 
