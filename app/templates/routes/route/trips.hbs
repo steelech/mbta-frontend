@@ -1,7 +1,10 @@
 {{#if showModalDialog}}
 	{{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
 		<div class="modal-dialog-container">
-			<div class="subscribe-text">Subscribe to notifications for this trip</div>
+			<div class="subscribe-modal-header">
+				<div class="subscribe-text">Subscribe to notifications for this trip:</div>
+				<div class="subscribe-modal-trip-name"><b>{{trip_name}}</b></div>
+			</div>
 			{{input class="form-control" placeholder="Phone number" value=value key-up=(action "setPhoneNumber" value)}}
 			<div class="subscribe-modal-buttons">
 				<div class="subscribe-cancel-button">
